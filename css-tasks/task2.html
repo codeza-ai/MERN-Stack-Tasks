@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #vertical {
+            width: 200px;
+            background-color: lightblue;
+            overflow: auto;
+        }
+
+        #vertical a {
+            display: block;
+            color: blue;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        #vertical a:hover {
+            background-color: #ddd;
+        }
+
+        #vertical .header {
+            background-color: orange;
+            color: white;
+            padding: 14px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #vertical ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #horizontal {
+            height: 50px;
+            list-style: none;
+            width: fit-content;
+            display: flex;
+            /* justify-content: space-evenly; */
+            align-items: center;
+            background-color: lightgrey;
+            overflow: hidden;
+        }
+
+        #horizontal a {
+            flex: 1;
+            text-align: center;
+            padding: 25px;
+            text-decoration: none;
+            color: blue;
+            border-left: 1px solid blue;
+        }
+
+        #horizontal a:hover {
+            background-color: #ddd;
+        }
+
+        #horizontal .active {
+            background-color: rgb(82, 82, 82);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="vertical">
+        <div class="header">Home</div>
+        <ul>
+            <li><a href="#java">Java</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#html">Html</a></li>
+            <li><a href="#bootstrap">Bootstrap</a></li>
+        </ul>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center; width: 100vw; height: 50vh;">
+        <ul id="horizontal">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#java">Java</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

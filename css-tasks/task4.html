@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverable Sidenav Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    
+        .sidenav {
+            height: 100%;
+            width: 60px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+    
+        .sidenav .btn {
+            padding: 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+            text-align: center;
+        }
+    
+        .sidenav .btn:hover {
+            width: 200px;
+        }
+    
+        .main {
+            margin-left: 60px;
+            /* Same as the width of the sidenav */
+            padding: 16px;
+        }
+    </style>
+</link>
+
+<body>
+    <div class="sidenav">
+        <a href="#" class="btn" style="background-color: green;">&nbsp;</a>
+        <a href="#" class="btn" style="background-color: red;">&nbsp;</a>
+        <a href="#" class="btn" style="background-color: blue;">&nbsp;</a>
+        <a href="#" class="btn" style="background-color: gray;">&nbsp;</a>
+    </div>
+    <div class="main">
+        <h1>Hoverable Sidenav Buttons</h1>
+        <p>Hover over the buttons in the left side navigation to open them.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
