@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .date, .time {
+            margin: 20px;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="date">
+            <h2>Today's date - </h2>
+            <h3 id="date"></h3>
+            <button>Show date</button>
+        </div>
+        <div class="time">
+            <h2>Current time - </h2>
+            <h3 id="time"></h3>
+            <button>Show time</button>
+        </div>
+    </div>
+</body>
+<script>
+    let dateBtn = document.querySelector('.date button');
+    let timeBtn = document.querySelector('.time button');
+    let date = document.getElementById('date');
+    let time = document.getElementById('time');
+
+    dateBtn.addEventListener('click', () => {
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
+        let fullDate = `${dd}/${mm}/${yyyy}`;
+        date.innerText = fullDate;
+    });
+
+    timeBtn.addEventListener('click', () => {
+        let today = new Date();
+        let hh = String(today.getHours()).padStart(2, '0');
+        let mm = String(today.getMinutes()).padStart(2, '0');
+        let ss = String(today.getSeconds()).padStart(2, '0');
+        let fullTime = `${hh}:${mm}:${ss}`;
+        time.innerText = fullTime;
+    });
+</script>
+</html>
